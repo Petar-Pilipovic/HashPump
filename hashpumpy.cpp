@@ -62,11 +62,12 @@ hashpump(PyObject *self, PyObject *args)
         return NULL;
     }
 
-    if(0 == original_data_size)
-    {
-        PyErr_SetString(HashpumpError, "original_data is empty");
-        return NULL;
-    }
+    // Unnecessary check
+//     if(0 == original_data_size)
+//     {
+//         PyErr_SetString(HashpumpError, "original_data is empty");
+//         return NULL;
+//     }
 
     if(0 == data_to_add_size)
     {
